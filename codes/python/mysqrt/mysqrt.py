@@ -1,4 +1,14 @@
+"""
+Module for printing the square root of fuction by newton Raphson Method
+
+"""
+
+#this is the sqrt command
 def sqrt2(x):
+	"""
+	sqrt function 
+	"""
+
 	s=2.0
 	kmax=100
 	tolerance=1.0e-14 
