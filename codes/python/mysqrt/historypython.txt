@@ -1,0 +1,177 @@
+ 5/1: x=linspace()0,2*pi,100
+ 5/2: x=linspace(0,2*pi,100)
+ 5/3: y=sin(x)
+ 5/4: plot(x,y)
+ 5/5: show
+ 5/6: plot(x,y).show()
+ 5/7: plot(x,y).show
+ 5/8: plot(x,y)
+ 6/1: x=linspace(0,2*pi,100)
+ 6/2: y=sin(x)
+ 6/3: plot(x,y)
+ 6/4: z=plot(x,y)
+ 6/5: z.show()
+ 6/6: pylab.plot
+ 6/7: pylab.plot(x,y)
+ 6/8: pylab.show()
+ 7/1: x=
+ 7/2: x=linspace(0,2*pi,100)
+ 7/3: y=sin(x)
+ 7/4: plot(x,y)
+ 7/5: pylab.show()
+ 9/1: x=
+ 9/2: x=linspace(0,2*pi,100)
+ 9/3: y=sin(x)
+ 9/4: plot(x,y)
+ 9/5: plot(x,2*y)
+ 9/6: plot(x,3*y)
+ 9/7: grid on
+ 9/8: grid
+ 9/9: grid.on
+13/1: pwd
+13/2: cd bitbucket/uwhpsc/
+13/3: l
+13/4: ls
+13/5: cd lectures/lecture1
+13/6: ls
+13/7:
+from matplotlib import pyplot as plt
+from matplotlib import cm               # colormaps
+import numpy as np
+13/8:
+fname = 'solution.txt'
+
+x, y, u = np.loadtxt(fname, unpack=True)
+13/9:
+n = int(np.sqrt(len(x)))
+assert n*n == len(x), "Expected len(x) to be a perfect square, len(x) = %s" % len(x)
+13/10:
+X = x.reshape(n,n)
+Y = y.reshape(n,n)
+U = u.reshape(n,n)
+13/11: plot(U)
+13/12: plt.plot(U)
+13/13:
+plt.figure(1)                  
+plt.clf()                      # clear figure
+plt.axis('scaled')             # so x- and y-axis scaled the same (square)
+plt.pcolor(X,Y,U,cmap=cm.jet)  # pseudo-color plot using colormap "jet"
+13/14: plt.clim(0., 1.)
+13/15: plt.colorbar()                 # add a color bar to show temperature scale
+13/16: plt.colorbar()
+13/17: plt.clf()
+13/18:
+plt.figure(1)                  
+plt.clf()                      # clear figure
+plt.axis('scaled')
+13/19: plt.show()
+13/20: plt.pcolor(X,Y,U)
+13/21: plt.pcolor(X,Y,U,cmap=cm.jet)
+13/22: plt.clim(0., 1.)
+13/23: plt.colorbar
+13/24: plt.colorbar()
+13/25: runfile('/home/hpsc/bitbucket/uwhpsc/lectures/lecture1/plot_solution.py', wdir='/home/hpsc/bitbucket/uwhpsc/lectures/lecture1')
+13/26: clear all
+13/27:
+
+from matplotlib import pyplot as plt
+from matplotlib import cm               # colormaps
+import numpy as np
+
+try:
+    fname = 'solution.txt'
+    x, y, u = np.loadtxt(fname, unpack=True)
+except:
+    err_msg = "Could not load data from file %s." % fname \
+              + " Did you forget to run the program?"
+    raise Exception(err_msg)
+
+
+# Solution is plotted on n by n grid so length of each vector should be n**2
+# Determine n:
+
+n = int(np.sqrt(len(x)))
+assert n*n == len(x), "Expected len(x) to be a perfect square, len(x) = %s" % len(x)
+
+
+X = x.reshape(n,n)
+Y = y.reshape(n,n)
+U = u.reshape(n,n)
+14/1: q
+15/1: from numpy import *
+15/2: sqrt(5)
+17/1: from numpy import sqrt
+17/2: sqrt(5)
+17/3: x=2.0
+17/4: kmax=10
+17/5: for k in range (kmax)
+17/6:
+for k in range (kmax):
+    s=0.5*(s+x/s)
+17/7:
+for k in range (kmax):
+    s=0.5*(s+(x/s))
+17/8: s=1.0
+17/9:
+for k in range (kmax):
+    s=0.5*(s+(x/s))
+17/10: s
+17/11: s-sqrt(7)
+17/12: s-sqrt(2)
+18/1: pwd
+18/2: HPSC
+18/3: exxit()
+19/1: pwd
+19/2: cat mysqrt.py
+19/3: cd ..
+19/4: ls
+19/5: cat mysqrt.py
+19/6: run mysqrt.py
+19/7: s
+19/8: run mysqrt.py
+19/9: run mysqrt.py
+19/10: s
+19/11: run mysqrt.py
+19/12: run mysqrt.py
+20/1: run my
+20/2: run mysqrt.py
+21/1: run mysqrt.py
+21/2: run mysqrt.py
+21/3: run mysqrt.py
+21/4: run mysqrt.py
+21/5: run mysqrt.py
+21/6: run mysqrt.py
+21/7: run mysqrt.py
+21/8: run mysqrt.py
+21/9: run mysqrt.py
+21/10: run mysqrt.py21
+21/11: run mysqrt.py
+21/12: run mysqrt.py567
+21/13: run mysqrt.py567
+21/14: run mysqrt.py
+21/15: run mysqrt.py
+21/16: run mysqrt.py
+21/17: run mysqrt.py
+21/18:     run mysqrt.py
+21/19:     run mysqrt.py
+21/20:     run mysqrt.py
+21/21:     run mysqrt.py
+21/22:     run mysqrt.py
+21/23:     run mysqrt.py
+21/24:     run mysqrt.py
+21/25:     run mysqrt.py
+21/26:     run mysqrt.py
+21/27:     run mysqrt.py
+21/28:     run mysqrt.py
+21/29:     run mysqrt.py
+21/30:     run mysqrt.py
+21/31:     run mysqrt.py
+21/32: git status
+21/33:     run mysqrt.py
+21/34:     run mysqrt.py
+   1: run mysqrt.py
+   2: sqrt2
+   3: sqrt2(2)
+   4: from mysqrt import sqrt2
+   5: sqrt2(2)
+   6: %history -g -o -f historypython.txt
